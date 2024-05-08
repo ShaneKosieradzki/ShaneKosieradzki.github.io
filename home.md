@@ -1,7 +1,6 @@
 ---
-layout: page
+layout: home
 title: "home"
-permalink: /
 ---
 
 # Home
