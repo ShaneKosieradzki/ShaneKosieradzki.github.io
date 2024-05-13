@@ -1,6 +1,6 @@
 ---
 title: "post test"
-layout: post
+layout: splash
 author_profile: true
 ---
 
