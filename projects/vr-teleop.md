@@ -1,11 +1,5 @@
 ---
-author_profile: true
 title: VR Teleoperation
-sidebar:
-  - title: Test Side Bar
-    image: \assets\personal-photo.jpg
-    image_alt: "image"
-    text: "some text"
 ---
 
 {% include load-mathjax %}
