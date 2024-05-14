@@ -1,4 +1,16 @@
 main:
-  - title: "Post Test"
-    url: post-test.md
-    description: Its like a tool-tip
+  - title: "About Me"
+    url: "/about-me"
+    description: 
+  
+  - title: "Academics"
+    url: "/academics"
+    description: 
+
+  - title: "Projects"
+    url: "/projects"
+    description: 
+  
+  - title: "Contact"
+    url: 
+    description: 

@@ -7,9 +7,14 @@ sidebar:
     text: "some text"
 ---
 
-<!-- {% include figure popup=true image_path="/assets/fpga-keygen/system-overview.png" caption="This is a figure caption." %} -->
 
-![image-left](/assets/fpga-keygen/system-overview.png){: .align-left}
+{% include figure popup=true image_path="/assets/fpga-keygen/system-overview.svg" 
+caption="Autonomous system employing dedicated cryptographic circuits with periodic key re-generation. By embedding a `Enc` circuit into the sensor node, the system can conceal the sensor signal from the cloud. The embedded Dec circuit in the actuator node then retrieves the control signal calculated by the cloud. The KeyGen circuit creates a new *active key* periodically replacing the key used by the other circuits." %}
+
+
+
+
+<!-- ![image-left](/assets/fpga-keygen/system-overview.png){: .align-left} -->
 
 
 

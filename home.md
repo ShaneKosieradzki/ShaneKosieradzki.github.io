@@ -1,6 +1,5 @@
 ---
-# layout: splash
-author_profile: true
+layout: splash
 title: "home"
 permalink: /
 ---
