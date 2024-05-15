@@ -31,9 +31,8 @@ PassFail_maps:
 abstract: "The research presented in this paper aims to establish functional mockup units (FMU) co-simulation methods to simulate and evaluate encrypted dynamic systems using somewhat homomorphic encryption (SHE). The proposed approach encrypts the entire dynamic system expressions, including: model parameters, state variables, feedback gains, and sensor signals, and perform computation in the ciphertext space to simulate dynamic behaviors or generate motion commands to servo systems. The developed FMU co-simulation helps analyze the relationship between security parameters and performance. Two illustrative examples are presented and analyzed: 1) encrypted Duffing oscillator and 2) encrypted teleoperation. How the time delay due to FMU co-simulation affects the refresh rate is also reported."
 ---
 
-{{page.abstract}}
 
-# Encrypted Duffing Oscillator
+### Encrypted Duffing Oscillator
 {% include figure 
     popup=true 
     image_path="/assets/fmu/fmu-duffing.svg"
@@ -43,7 +42,7 @@ abstract: "The research presented in this paper aims to establish functional moc
     id="duffing_trajectories"
     caption="This is a sample gallery with **Markdown support**." %}
 
-# Encrypted Teleoperation
+### Encrypted Teleoperation
 {% include figure 
     popup=true 
     image_path="/assets/fmu/fmu-teleop.svg"
@@ -53,7 +52,7 @@ abstract: "The research presented in this paper aims to establish functional moc
     id="teleop_trajectories"
     caption="This is a sample gallery with **Markdown support**." %}
 
-# Test Bed
+### Test Bed
 {% include figure 
     popup=true 
         image_path="/assets/fmu/testbed-staging.svg"
@@ -64,7 +63,7 @@ caption="" %}
     image_path="/assets/fmu/testbed-flow.svg"
     caption="" %}
 
-# Pass/Fail Maps
+### Pass/Fail Maps
 {% include gallery 
     id="PassFail_maps"
     caption="This is a sample gallery with **Markdown support**." %}
