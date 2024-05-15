@@ -52,7 +52,7 @@ First we created a standalone FMU for the nonlinear [*duffing oscillator*](), to
 Then we created a more complex teleoperation system, consisting of three FMUs, but encryption isolated to the controller FMU alone.
 
 
-### Encrypted Duffing Oscillator
+## Encrypted Duffing Oscillator
 {% include figure 
     popup=true 
     image_path="/assets/fmu/fmu-duffing.svg"
@@ -62,7 +62,7 @@ Then we created a more complex teleoperation system, consisting of three FMUs, b
     id="duffing_trajectories"
     caption="This is a sample gallery with **Markdown support**." %}
 
-### Encrypted Teleoperation
+## Encrypted Teleoperation
 In the following configuration the `local.fmu` and `remote.fmu` represent a controller and manipulator in a [teleoperation configuration](/learning/teleoperation.md) and will be refered to as the *plants*.
 State information is collected from both plants and sent to the controller, which encrypts the inputs, computes control commands in cipher-space, and then decrypts and broadcasts the commands back to the plants.
 
@@ -92,16 +92,32 @@ The details of what constitute "good" parameters can be complex and will depend 
 However parameters the result in a failure to complete the control objective, like the above example (right), are clearly "bad" parameters.
 This motivates the need for the test-bed procedure outlined in the following section.
 
-### Test Bed
+## Test Bed
+The entire project's created with a *mix-and-match* design philosophy, that is try to allow for as much freedom of in choice of: cipher, simulation system, security parameters, etc.
+
+The project was centered around keeping the choice of cipher and security parameters completely disjoint from the system to be simulated.
+This way a designer may work with whatever homomorphic cipher they like, the idea being that you may have to select different ciphers to get best performance depending on the control problem they are solving.
+
 {% include figure 
     popup=true 
         image_path="/assets/fmu/testbed-staging.svg"
-caption="" %}
+caption="FMU/Cipher test-bed: System simulation is constructed by linking FMUs chosen from a remote repository. A cipher is then selected to be tested for compatibility with the given FMU system." %}
+
+Cycling through different ciphers alone is not enough to construct a working encrypted controller, once a cipher is chosen we also need to find "good" security parameters.
+As we have seen in the previous examples, wrong choice of security parameters can result in complete failure of the system.
+
+This research produced a workflow to categorize any set of security parameters for any cipher into either "good" or "bad" based on the following user specifications: \\( \varepsilon_T \\) the error tolerance, \\( \tau_T \\) the time tolerance, and a reference model.
+The reference model is the ideal controller performance and can usually be the unencrypted version of the controller in question.
+The error tolerance \\( \varepsilon_T \\), defined how much error is allowable between the encrypted control performance and the reference model.
+Finally, \\( \tau_T \\) is the allowable computation time for the encrypted controller to compute the next control command, give the real-time requirements of control systems \\( \tau_T \\) must be very small.
+
+With these we can define the following parameter evaluation loop:
+
 
 {% include figure 
     popup=true 
     image_path="/assets/fmu/testbed-flow.svg"
-    caption="" %}
+    caption="Testbed Flow: Evaluation scheme to find successful security parameters, where $\varepsilon$ is the measured error, \\(\varepsilon_T \\) the error tolerance, \\( \tau \\) the measured simulation-cycle time, and \\( \tau_T \\) the simulation-cycle time tolerance." %}
 
 ### Pass/Fail Maps
 {% include gallery 
