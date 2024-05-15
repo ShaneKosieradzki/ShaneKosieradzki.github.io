@@ -1,7 +1,11 @@
 ---
 title: FPGA Key Gen
 classes: wide
+
+abstract: "This paper presents an investigation into the improvement of security and operation time in homomorphically encrypted systems using Field Programmable Gate Array (FPGA) technology. The primary objective is to generate keys efficiently, minimizing key sizes while maintaining security. By leveraging FPGA capabilities for key generation and key switching, smaller ciphertext sizes can be achieved, ultimately improving operation time. The paper focuses on the development of a sensor data encryption system implemented on an FPGA board. The proposed approach enables simultaneous key generation and encryption of incoming sensor data using generated keys. The developed system implemented fixed-size random number generation and prime number checking in hardware, subsequently expanding these capabilities to produce arbitrarily sized prime numbers."
 ---
+
+{{page.abstract}}
 
 <!-- FIGURE: Key Generation + Sensor + Actuator -->
 {% include figure 
