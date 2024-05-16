@@ -5,7 +5,7 @@ classes: wide
 research:
   institute: Georgia Institute of Technology
   PI: Dr. Jun Ueda
-  date: "2021"
+  date: January 2021
   funding:
     body:  National Science Foundation
     grant: CMMI 2112793 and ERC 2124319
@@ -57,7 +57,7 @@ This research began by attempting to encrypt the calculations of the duffing dyn
 To achieve this the following architecture was used: a `duffing.fmu` was created to capture the system dynamics taking as input \\( x\_k \\), \\( x\_k^3 \\), \\( \dot{x}\_k \\) , \\( F = \cos(\omega t) \\) and computing \\( x\_{k+1} \\) and \\( \dot{x}\_{k+1} \\) via Euler's Method.
 
 The dynamics calculations themselves were written against an external interface which makes calls to the shared object named `cipher.dll` on windows and `cipher.so` on linux.
-The shared object contains all the cryptographic methods expected from an homomorphic cipher i.e. encrypt, decrypt, encrypted add, and encrypted multiply.
+The shared object contains the encrypted field operations expected from an homomorphic cipher--i.e. encrypted add and encrypted multiply--as well as encrypt and decrypt methods.
 
 {% include figure 
     popup=true 

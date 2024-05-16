@@ -1,4 +1,7 @@
-**Disclosure of Funding Source:** This research was conducted at the {{page.research.institute}} under the supervision of {{page.research.PI}} in {{page.research.date}} resulting in the following publication: [{{page.research.publication.title}}]({{page.research.publication.url}}).
+**Disclosure of Funding Source:** 
+This research was conducted at the {{page.research.institute}} 
+under the supervision of {{page.research.PI}}, completing in {{page.research.date}},
+resulting in the following publication: [{{page.research.publication.title}}]({{page.research.publication.url}}).
 <br/>
 <br/>
 This study was supported in part by {{page.research.funding.body}} Grant Nos. {{page.research.funding.grant}}.
