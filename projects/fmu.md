@@ -137,10 +137,15 @@ With these we can define the following parameter evaluation loop:
 {% include figure 
     popup=true 
     image_path="/assets/fmu/testbed-flow.svg"
-    caption="Testbed Flow: Evaluation scheme to find successful security parameters, where $\varepsilon$ is the measured error, \\(\varepsilon_T \\) the error tolerance, \\( \tau \\) the measured simulation-cycle time, and \\( \tau_T \\) the simulation-cycle time tolerance." %}
+    caption="Testbed Flow: Evaluation scheme to find successful security parameters, where \\( \varepsilon \\) is the measured error, \\(\varepsilon_T \\) the error tolerance, \\( \tau \\) the measured simulation-cycle time, and \\( \tau_T \\) the simulation-cycle time tolerance." %}
 
-### Pass/Fail Maps
+Using the above workflow this research was restrict the parameter space from the choice of all possible security parameters to a bifurcated *pass* and *fail* regimes.
+These pass/fail maps were obtained by exhaustive enumeration of feasible security parameters for the teleoperation system described above.
+To fully understand these results as well as the parameters varied (i.e. \\( \nu \\), \\( \Delta \\), \\( \lambda \\)  ) one should read the [original paper]({{page.research.publication.url}}).
+Nonetheless one can still observe a sharpe nonlinearity in the "\\( \nu \\) vs \\( \Delta \\)" plot while the "\\( \nu \\) vs \\( \lambda \\)" plot trends linearly.
+
 {% include gallery 
     id="PassFail_maps"
-    caption="This is a sample gallery with **Markdown support**." %}
+    caption="Pass/fail results for the teleoperation system with. The results display a bifurcation between a *pass* and *fail* regime, where failure is defined based off of \\( \tau_T \\), and \\(\varepsilon_T \\) from the above workflow." %}
 
+Overall this research successfully constructed and demonstrated a scalable encrypted simulation/control paradigm based off of existing technologies allowing for rapid integration into the existing technology stack as well as novel testing and parameter mapping procedures.  
