@@ -6,10 +6,12 @@ research:
   institute: Georgia Institute of Technology
   PI: Dr. Jun Ueda
   date: "2021"
-  grant: National Science Foundation Grant Nos. CMMI 2112793 and ERC 2124319
+  funding:
+    body:  National Science Foundation
+    grant: CMMI 2112793 and ERC 2124319
   publication:
-    title:
-    url:
+    title: Distributed Simulation of Encrypted Dynamics via Functional Mockup Units
+    url: https://doi.org/10.1109/SII55687.2023.10039150
 
 duffing_trajectories:
   - image_path: /assets/fmu/traj-duff-unenc.svg
@@ -37,13 +39,10 @@ PassFail_maps:
 
     - image_path: /assets/fmu/PassFail-lambda-nu.svg
       title: Security Parameter vs Security Parameter
-
-abstract: "The research presented in this paper aims to establish functional mockup units (FMU) co-simulation methods to simulate and evaluate encrypted dynamic systems using somewhat homomorphic encryption (SHE). The proposed approach encrypts the entire dynamic system expressions, including: model parameters, state variables, feedback gains, and sensor signals, and perform computation in the ciphertext space to simulate dynamic behaviors or generate motion commands to servo systems. The developed FMU co-simulation helps analyze the relationship between security parameters and performance. Two illustrative examples are presented and analyzed: 1) encrypted Duffing oscillator and 2) encrypted teleoperation. How the time delay due to FMU co-simulation affects the refresh rate is also reported."
 ---
 
 {% include load-mathjax %}
-
-This research was conducted at the {{page.research.institute}} under the supervision of {{page.research.PI}} in {{page.research.date}} resulting in the following publication: [{{page.research.publication.title}}]({{page.research.publication.url}})
+{% include research-funding-disclosure-statement %}
 
 The goal of this project was to create a simulation testbed on which to evaluate the effectiveness of different [homomorphic ciphers](/learning/what-is-a-homomorphic-cipher.md) in realtime encrypted control scenarios.
 To do this the encapsulation provided by FMUs was leveraged to create a simulation environment isolating encrypted calculations to the controller, exactly how a real encrypted cyber-physical system would be organized.
