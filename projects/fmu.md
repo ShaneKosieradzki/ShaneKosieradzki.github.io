@@ -48,19 +48,39 @@ This research was conducted at the {{page.research.institute}} under the supervi
 The goal of this project was to create a simulation testbed on which to evaluate the effectiveness of different [homomorphic ciphers](/learning/what-is-a-homomorphic-cipher.md) in realtime encrypted control scenarios.
 To do this the encapsulation provided by FMUs was leveraged to create a simulation environment isolating encrypted calculations to the controller, exactly how a real encrypted cyber-physical system would be organized.
 
-First we created a standalone FMU for the nonlinear [*duffing oscillator*](), to show that HE calculations could be successfully integrated into the FMU.
+First we created a standalone FMU for the nonlinear [*duffing oscillator*](https://en.wikipedia.org/wiki/Duffing_equation), to show that HE calculations could be successfully integrated into the FMU.
 Then we created a more complex teleoperation system, consisting of three FMUs, but encryption isolated to the controller FMU alone.
 
 
 ## Encrypted Duffing Oscillator
+The [*duffing oscillator*](https://en.wikipedia.org/wiki/Duffing_equation) is a nonlinear differential equation regarded as one of the prototypes for systems of nonlinear dynamics.
+This research began by attempting to encrypt the calculations of the duffing dynamics for any arbitrary homomorphic cipher.
+To achieve this the following architecture was used: a `duffing.fmu` was created to capture the system dynamics taking as input \\( x\_k \\), \\( x\_k^3 \\), \\( \dot{x}\_k \\) , \\( F = \cos(\omega t) \\) and computing \\( x\_{k+1} \\) and \\( \dot{x}\_{k+1} \\) via Euler's Method.
+
+The dynamics calculations themselves were written against an external interface which makes calls to the shared object named `cipher.dll` on windows and `cipher.so` on linux.
+The shared object contains all the cryptographic methods expected from an homomorphic cipher i.e. encrypt, decrypt, encrypted add, and encrypted multiply.
+
 {% include figure 
     popup=true 
     image_path="/assets/fmu/fmu-duffing.svg"
-    caption="All parameters in the duffing equations were encrypted and ran in FMU, where \\(F=\cos(\omega t)\\) is the forcing function, and \\(x_k = x(k T_s)\\)." %}
+    caption="All parameters in the duffing equations were encrypted and ran in FMU, where \\(F=\cos(\omega t)\\) is the forcing function, and \\(x\_k = x(k T\_s)\\)." %}
 
+This architecture is ideal for testing the computational feasibility of a proposed encrypted dynamics calculation as it completely decouples the simulation code from the encryption code.
+This allows the user to quickly change between different ciphers or security parameters in case those chosen are insufficient or result in simulation failure.
+
+As an initial test, this research used the above encrypted FMU architecture to simulate the [phase-plane trajectory](https://en.wikipedia.org/wiki/Phase_portrait) of the duffing oscillator.
+These plots are quintessential in nonlinear system dynamics and can intuitively be understood as describing how the energy flows between the different states of the system.
 {% include gallery 
     id="duffing_trajectories"
-    caption="This is a sample gallery with **Markdown support**." %}
+    caption="Phase-Plane Trajectories of the Duffing oscillator. **From left to right: unencrypted, encrypted (pass), encrypted (fail)**. The far right simulation failed due to *homomorphic overflow* caused by poor choice of security parameters" %}
+
+In the above phase portraits the unencrypted portrait (left) is what we take as *ground truth* and is what we expect our encrypted simulations to mimic.
+While one of the encrypted portraits (middle) seems close enough, the other encrypted portrait (right) does not.
+This is due to a phenomenon known as [homomorphic overflow]() which occurs when too much error is introduced into a long running calculation, causing complete loss of data.
+
+The noise growth that leads to overflow is intrinsic in homomorphic ciphers and cannot be avoided.
+While it is possible to removed the accumulated noise through an an expensive operation known as [bootstrapping](), in practice the computational cost is too high to allow for real-time computation.
+Instead the main method of avoiding overflow is to choose security parameters that allow the entire computation to be computed withing the cipher's *noise budget*.
 
 ## Encrypted Teleoperation
 In the following configuration the `local.fmu` and `remote.fmu` represent a controller and manipulator in a [teleoperation configuration](/learning/teleoperation.md) and will be refered to as the *plants*.
@@ -93,7 +113,7 @@ However parameters the result in a failure to complete the control objective, li
 This motivates the need for the test-bed procedure outlined in the following section.
 
 ## Test Bed
-The entire project's created with a *mix-and-match* design philosophy, that is try to allow for as much freedom of in choice of: cipher, simulation system, security parameters, etc.
+The entire project was created around a *mix-and-match* design philosophy, that is try to allow for as much freedom in the choice of: cipher, simulation system, security parameters, etc.
 
 The project was centered around keeping the choice of cipher and security parameters completely disjoint from the system to be simulated.
 This way a designer may work with whatever homomorphic cipher they like, the idea being that you may have to select different ciphers to get best performance depending on the control problem they are solving.
