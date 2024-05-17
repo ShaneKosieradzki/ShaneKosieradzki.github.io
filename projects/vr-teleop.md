@@ -1,15 +1,54 @@
 ---
 title: VR Teleoperation
+classes: wide
 
-abstract: "This paper seeks to understand the viability of encrypted robot control. Controllers are susceptible to malicious attacks unless controller parameters are encrypted; however, homomorphic encryption is necessary in order to allow controller mathematical operations on encrypted text, but is limited due to heavy computational overhead. Encrypted control is accomplished via the implementation of Dyer's somewhat homomorphic encryption scheme on multi and single threaded matrix transformations in order to telecommunicate movement commands between a virtual-reality joystick and a robot arm. Results find that encrypted teleoperation via the user interface is a viable encrypted controller technique, and is optimally produced on multi-threaded systems."
+research:
+  institute: Georgia Institute of Technology
+  PI: Dr. Jun Ueda
+  date: June 2023
+  funding:
+    body:  National Science Foundation
+    grant: "2112793"
+  publication:
+    title: Encrypted Coordinate Transformation via Parallelized Somewhat Homomorphic Encryption for Robotic Teleoperation
+    url: https://doi.org/10.1109/AIM46323.2023.10196122
+
+timing_histograms:
+  - image_path: /assets/vr-teleop/seriesTimeHistogram.svg
+    url: /assets/vr-teleop/seriesTimeHistogram.svg
+    title: "Computation time histogram for series method"
+
+  - image_path: /assets/vr-teleop/parallelTimesHistogram.svg
+    url: /assets/vr-teleop/parallelTimesHistogram.svg
+    title: "Computation time histogram for parallel method"
+
+
 ---
 
-{{page.abstract}}
-
 {% include load-mathjax %}
+{% include research-funding-disclosure-statement %}
 
-I want to test matjax and see if it works.
-\\[ a^2 + b^2 = \int_0^x c(x)^2 dx\\]
-There should be an equation block above this.
 
-Now I want to test an in-line equation: \\( F = m a \\)
+{% include figure 
+popup=true 
+image_path="/assets/vr-teleop/vrandrobotframes2.svg"
+caption="" %}
+
+{% include figure 
+popup=true 
+image_path="/assets/vr-teleop/URImage.png"
+caption="" %}
+
+{% include figure 
+popup=true 
+image_path="/assets/vr-teleop/lambda-time.svg"
+caption="" %}
+
+{% include figure 
+popup=true 
+image_path="/assets/vr-teleop/sequence.svg"
+caption="" %}
+
+{% include gallery 
+    id="timing_histograms"
+    caption="" %}

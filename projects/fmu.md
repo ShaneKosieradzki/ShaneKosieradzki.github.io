@@ -15,29 +15,37 @@ research:
 
 duffing_trajectories:
   - image_path: /assets/fmu/traj-duff-unenc.svg
+    url: /assets/fmu/traj-duff-unenc.svg
     title: "Duffing Unencrypted Trajectory"
 
   - image_path: /assets/fmu/traj-duff-enc.svg
+    url: /assets/fmu/traj-duff-enc.svg
     title: "Duffing Encrypted Trajectory (Pass)"
 
   - image_path: /assets/fmu/traj-duff-fail.svg
+    url: /assets/fmu/traj-duff-fail.svg
     title: "Duffing Encrypted Trajectory (Fail)"
 
 teleop_trajectories:
   - image_path: /assets/fmu/traj-tele-unenc.svg
+    url: /assets/fmu/traj-tele-unenc.svg
     title: "Teleoperation Unencrypted Trajectory"
 
   - image_path: /assets/fmu/traj-tele-enc.svg
+    url: /assets/fmu/traj-tele-enc.svg
     title: "Teleoperation Encrypted Trajectory (Pass)"
 
   - image_path: /assets/fmu/traj-tele-fail.svg
+    url: /assets/fmu/traj-tele-fail.svg
     title: "Teleoperation Encrypted Trajectory (Fail)"
 
 PassFail_maps:
     - image_path: /assets/fmu/PassFail-delta-nu.svg
+      url: /assets/fmu/PassFail-delta-nu.svg
       title: Security Parameter vs Encoding Parameter
 
     - image_path: /assets/fmu/PassFail-lambda-nu.svg
+      url: /assets/fmu/PassFail-lambda-nu.svg
       title: Security Parameter vs Security Parameter
 ---
 
