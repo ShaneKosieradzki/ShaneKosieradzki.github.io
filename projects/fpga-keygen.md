@@ -15,6 +15,7 @@ research:
 
 ---
 
+{% include load-mathjax %}
 {% include research-funding-disclosure-statement %}
 
 Homomorphic ciphers are instantiated with a set of security parameters.
@@ -47,16 +48,61 @@ This design is depicted in the figure below:
 The encrypted signal is sent to the encrypted controller as input, which produces an encrypted output per a typical encrypted controller setup.
 
 
-## Implementation
+## Random Number Generator
 The exact key implementation details will depend on the cipher chosen, since this research considered an integer based cipher prime generation will be the primary problem to overcome.
+Finding prime numbers is a challenging problem, and is indeed how many ciphers gain their strength, so we should expect a nontrivial computational burden when constructing a prime generation circuit.
 
+This research uses the well known [Miller-Rabin primality test](https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test) (MR) to find primes.
+Using the MR test we can decided if a random number is prime or composite, but this alone will not find a prime for us, just tell us if a candidate is prime.
+So to complete the prime generation module we need an random number generator (RNG) circuit.
 
-
+While true randomness is not achievable within deterministic devices such as Field Programmable Gate Arrays (FPGAs), pseudorandom number generators can be implemented utilizing a starting seed to produce random numbers. 
+One such example is the Linear Feedback Shift Register (LFSR) depicted below:
 {% include figure 
 popup=true 
 image_path="/assets/fpga-keygen/LFSR.png"
-caption="Linear Feedback Shift Register" %}
+caption="
+Linear Feedback Shift Register with taps at its 
+\\( 0^{\text{th}} \\), \\( 1^{\text{st}} \\), \\( 3^{\text{rd}} \\), and \\( 5^{\text{th}} \\) bits.
+" 
+%}
 
+An LFSR consists of a clocked shift register with feedback from its constituent bits, often referred to as "taps", as depicted above.
+By applying the exclusive or (XOR) operation between bits within the shift register, a new pseudorandom bit value can be introduced into the register at every clock cycle.
+
+## Primality Test
+The Miller-Rabin primality test is a probabilistic primality test based on [Fermat's Little Theorem](https://mathworld.wolfram.com/FermatsLittleTheorem.html). 
+It "checks" the primality of a number \\(n\\) by attempting to prove it to be composite.
+So its less of a primality test and more of a composite test.
+Still, be successively checking the same prime repeatedly we can gain high confidence that it is in fact a true prime.
+
+Miller-Rabin works as follows: we are tasked with deciding if $n$ is prime using a set of random natural numbers $a \in \mathbb{N}$ called witnesses.
+Let $A$ be a collection of random natural numbers, than $a \in A$ is said to be a *witness* to $n$ being composite it:
+
+Fermat's Little Theorem can be manipulated to come to the following form:
+
+\\[ a^{p-1} \equiv 1 \mod p \\]
+
+Where $p$ is some prime and $a$ is any natural number.
+While the above is a *necessary* condition (it holds for all primes) it is not a *sufficient* condition for finding primes i.e. there are some composite numbers that will satisfy Fermat's little Theorem.
+
+The Miller-Rabin primality test works by taking the inverse of Fermat's Little Theorem to create a *composite test*.
+Thus we can say that $a$ is a *witness* to $n$ being composite if:
+
+\\[ a^{n-1} \not\equiv 1 \mod n \\]
+
+However, even if $n$ passes the above test, there is a chance that it is a strong pseudoprime, for which the corresponding value of $a$ would be a strong liar. 
+To remedy this, the Miller-Rabin test is performed several times on a potential prime, reducing the chances that it is a strong pseudoprime with so many strong liars.
+
+
+\\[ \varepsilon < \left(\frac{1}{4} \right)^k . \\]
+
+\\[ P(\text{$n$ is prime after $k$ checks}) \approx 1 - \left( \frac{1}{4} \right)^k. \\]
+
+{% include figure 
+    popup=true 
+    image_path="/assets/fpga-keygen/MR-PLACEHOLDER.png"
+    caption="Miller-Rabin Primality Test" %}
 
 ## Results
 
