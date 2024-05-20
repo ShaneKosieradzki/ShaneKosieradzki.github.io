@@ -11,6 +11,7 @@ This is a link to a [test link](subpage-test.md)
 
 Another [link](post-test.md)
 
+[statement test](/_validate-research-statement.md)
 # Project Links
 
 [VR Teleop](/projects/vr-teleop.md)       \

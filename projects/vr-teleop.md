@@ -28,6 +28,10 @@ timing_histograms:
 {% include load-mathjax %}
 {% include research-funding-disclosure-statement %}
 
+{% include figure 
+popup=true 
+image_path="/assets/vr-teleop/encrypted-teleop.svg"
+caption="" %} 
 
 {% include figure 
 popup=true 

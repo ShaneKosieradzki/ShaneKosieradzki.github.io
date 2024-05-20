@@ -1,10 +1,78 @@
 ---
 title: Dyer's vs BFV
+classes: wide
 
-abstract: "The goal of this research is to establish control theoretic methods to enhance cyber security of networked motion control systems by utilizing somewhat homomorphic encryption.
-The proposed approach will encrypt the entire motion control schemes including: sensor signals, model parameters, feedback gains, and performs computation in the ciphertext space to generate motion commands to servo systems without a security hole. 
-The paper will discuss implementation of encrypted bilateral teleoperation control schemes with nonlinear friction compensation. 
-The paper will present (1) encrypted teleoperation control realization with somewhat homomorphic encryption and (2) simulation results."
+research:
+  institute: Georgia Institute of Technology
+  PI: Dr. Jun Ueda
+  date: November 2022
+  funding:
+    body:  National Science Foundation
+    grant: 2112793
+  publication:
+    title: Secure Teleoperation Control Using Somewhat Homomorphic Encryption
+    url: https://doi.org/10.1016/j.ifacol.2022.11.247
+
+cipher_timing:
+  - image_path: /assets/dyers-vs-bfg/operation-time-bfg.png
+    url: /assets/dyers-vs-bfg/operation-time-bfg.png
+    title: "Operation times for the BFG cipher."
+
+  - image_path: /assets/dyers-vs-bfg/operation-time-dyers.png
+    url: /assets/dyers-vs-bfg/operation-time-dyers.png
+    title: "Operation times for the Dyer's cipher."
+
 ---
 
-{{page.abstract}}
+{% include load-mathjax %}
+{% include research-funding-disclosure-statement %}
+
+## Teleoperation
+
+{% include figure 
+    popup=true 
+    image_path="/assets/dyers-vs-bfg/teleoperation-operator-manipulator.svg"
+    caption="" %}
+
+{% include figure 
+    popup=true 
+    image_path="/assets/dyers-vs-bfg/virtual-spring-diagram2.svg"
+    caption="" %}
+
+
+## Encrypted Controller
+{% include figure 
+    popup=true 
+    image_path="/assets/dyers-vs-bfg/encrypted-controller-cartoon-proposal.svg"
+    caption="" %}
+
+### PHE Controller
+
+{% include figure 
+    popup=true 
+    image_path="/assets/dyers-vs-bfg/encrypted-controller-cartoon-phe.svg"
+    caption="" %}
+
+
+{% include figure 
+    popup=true 
+    image_path="/assets/dyers-vs-bfg/encrypted-controller-schematic-phe.svg"
+    caption="" %}
+
+
+
+### SHE Controller
+{% include figure 
+    popup=true 
+    image_path="/assets/dyers-vs-bfg/encrypted-controller-cartoon-she.svg"
+    caption="" %}
+
+{% include figure 
+    popup=true 
+    image_path="/assets/dyers-vs-bfg/encrypted-controller-schematic-she.svg"
+    caption="" %}
+
+## Timing Results
+{% include gallery 
+    id="cipher_timing"
+    caption="" %}
