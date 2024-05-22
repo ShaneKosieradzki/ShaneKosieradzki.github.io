@@ -155,4 +155,6 @@ Nonetheless one can still observe a sharpe nonlinearity in the "\\( \nu \\) vs \
     id="PassFail_maps"
     caption="Pass/fail results for the teleoperation system with. The results display a bifurcation between a *pass* and *fail* regime, where failure is defined based off of \\( \tau_T \\), and \\(\varepsilon_T \\) from the above workflow." %}
 
+# Conclusion
+
 Overall this research successfully constructed and demonstrated a scalable encrypted simulation/control paradigm based off of existing technologies allowing for rapid integration into the existing technology stack as well as novel testing and parameter mapping procedures.  
