@@ -18,6 +18,7 @@ research:
 {% include load-mathjax %}
 {% include research-funding-disclosure-statement %}
 
+# Research Goal
 Homomorphic ciphers are instantiated with a set of security parameters.
 Beyond security these parameters also affect the performance of an encrypted calculation, with stronger parameters resulting in slower computations.
 This presents a design challenge for *encrypted controllers* as a designer must balance security against controller refresh speed.
@@ -31,8 +32,9 @@ If we can periodically switch the small key, at a rate faster than any attacker 
 {% include figure 
 popup=true 
 image_path="/assets/fpga-keygen/single-large-key-vs-many-small-keys.png"
-caption="" %}
+caption="A depiction of the motivation behind the the key switching idea. Here we see that many weaker keys can be just as good as one strong key provided the keys are switched fast enough. We require the the time any one key is used $t_\text{switch}$ is less then the time required to break the key $t_\text{break}$ plus some safety margin $\epsilon_\text{safety}$."%}
 
+# System Design
 One of the challenges of using this *many-small-key* approach is that generating cryptographic keys is itself a burdensome computation.
 To overcome the computational burden the research produced an FPGA based design with the following architecture.
 First, each sensor/actuator in the system has an `Enc`/`Dec` circuit attached directly to its output/input, reducing the time the signal spends unencrypted to increase security.
@@ -63,7 +65,7 @@ popup=true
 image_path="/assets/fpga-keygen/LFSR.png"
 caption="
 Linear Feedback Shift Register with taps at its 
-\\( 0^{\text{th}} \\), \\( 1^{\text{st}} \\), \\( 3^{\text{rd}} \\), and \\( 5^{\text{th}} \\) bits.
+\\( 0^{\text{th}} \\), \\( 1^{\text{st}} \\), \\( 3^{\text{rd}} \\), and \\( 5^{\text{th}} \\) bits. By `XOR`ing together the tapped bits we can create a highly random sequence of register values. Note a new bit is feed back into the shift register every clock cycle.
 " 
 %}
 
@@ -71,6 +73,9 @@ An LFSR consists of a clocked shift register with feedback from its constituent 
 By applying the exclusive or (XOR) operation between bits within the shift register, a new pseudorandom bit value can be introduced into the register at every clock cycle.
 
 ## Primality Test
+
+<span style="color:red">TODO: FIX THIS SECTION</span>.
+
 The Miller-Rabin primality test is a probabilistic primality test based on [Fermat's Little Theorem](https://mathworld.wolfram.com/FermatsLittleTheorem.html). 
 It "checks" the primality of a number \\(n\\) by attempting to prove it to be composite.
 So its less of a primality test and more of a composite test.
@@ -99,20 +104,30 @@ To remedy this, the Miller-Rabin test is performed several times on a potential 
 
 \\[ P(\text{$n$ is prime after $k$ checks}) \approx 1 - \left( \frac{1}{4} \right)^k. \\]
 
-{% include figure 
-    popup=true 
-    image_path="/assets/fpga-keygen/MR-PLACEHOLDER.png"
-    caption="Miller-Rabin Primality Test" %}
-
-## Results
+# Experimental Setup
+To emulate a sensor signal in a consistent and reliable way a $\sin$ wave was produced by a function generator and fed into an analog to digital converter (ADC).
+The ADC signal was than fed through the internal encrypt logic implemented on the FPGA.
+This simple setup can be seen below:
 
 {% include figure 
     popup=true 
     image_path="/assets/fpga-keygen/exp-setup.png"
-    caption="FPGA board setup" %}
+    caption="FPGA board setup with a sensor signal emulated by a function generator connected to an on-board ADC." %}
 
+Additionally we looked at the performance of generating increasingly larger keys on a CPU vs using our FPGA design.
+These results are captured in the plot below:
+Note that the CPU implementation appears to be growing exponentially while the FPGA plot shows a linear trend.
+This is because a CPU is limited by the size of its registers and processor word size while an FPGA does not have the same limitations and can simply allocate more gates to compensate for the increased computational burden.
 
 {% include figure 
 popup=true 
 image_path="/assets/fpga-keygen/results.png"
-caption="" %}
+caption="Cipher Key generation time vs Cipher Key size for an FPGA based and CPU based implementation. The CPU based design shows exponentially increasing generation time for larger keys making it impractical for use in real-time applications." %}
+
+While the FPGA shows amazing results with its linear performance it should be noted that the increased gate usage for large key generation comes with significant increases in power consumption.
+Thus an FPGA based cryptographic key generation system is limited by power consumption as compared to computation time.
+
+# Conclusion
+This research set out to address the issue of security vs refresh rate posed by cipher key size (recall a small key is insecure but allows for fast encrypted calculations).
+A novel key switching procedure was proposed where small keys are constantly switched between to allow for fast calculation and secure calculations as the keys are generated faster then they can be hacked.
+An FPGA based support circuit was successfully constructed to generate the cipher keys and broadcast them to relevant encryption and decryption circuits at an acceptable rate for real-time application.
