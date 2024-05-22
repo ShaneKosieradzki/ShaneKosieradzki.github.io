@@ -52,6 +52,7 @@ PassFail_maps:
 {% include load-mathjax %}
 {% include research-funding-disclosure-statement %}
 
+# Research Goal
 The goal of this project was to create a simulation testbed on which to evaluate the effectiveness of different [homomorphic ciphers](/learning/what-is-a-homomorphic-cipher.md) in realtime encrypted control scenarios.
 To do this the encapsulation provided by FMUs was leveraged to create a simulation environment isolating encrypted calculations to the controller, exactly how a real encrypted cyber-physical system would be organized.
 
@@ -59,7 +60,7 @@ First we created a standalone FMU for the nonlinear [*duffing oscillator*](https
 Then we created a more complex teleoperation system, consisting of three FMUs, but encryption isolated to the controller FMU alone.
 
 
-## Encrypted Duffing Oscillator
+# Encrypted Duffing Oscillator
 The [*duffing oscillator*](https://en.wikipedia.org/wiki/Duffing_equation) is a nonlinear differential equation regarded as one of the prototypes for systems of nonlinear dynamics.
 This research began by attempting to encrypt the calculations of the duffing dynamics for any arbitrary homomorphic cipher.
 To achieve this the following architecture was used: a `duffing.fmu` was created to capture the system dynamics taking as input \\( x\_k \\), \\( x\_k^3 \\), \\( \dot{x}\_k \\) , \\( F = \cos(\omega t) \\) and computing \\( x\_{k+1} \\) and \\( \dot{x}\_{k+1} \\) via Euler's Method.
@@ -89,7 +90,7 @@ The noise growth that leads to overflow is intrinsic in homomorphic ciphers and 
 While it is possible to removed the accumulated noise through an an expensive operation known as [bootstrapping](), in practice the computational cost is too high to allow for real-time computation.
 Instead the main method of avoiding overflow is to choose security parameters that allow the entire computation to be computed withing the cipher's *noise budget*.
 
-## Encrypted Teleoperation
+# Encrypted Teleoperation
 In the following configuration the `local.fmu` and `remote.fmu` represent a controller and manipulator in a [teleoperation configuration](/learning/teleoperation.md) and will be refered to as the *plants*.
 State information is collected from both plants and sent to the controller, which encrypts the inputs, computes control commands in cipher-space, and then decrypts and broadcasts the commands back to the plants.
 
@@ -119,7 +120,7 @@ The details of what constitute "good" parameters can be complex and will depend 
 However parameters the result in a failure to complete the control objective, like the above example (right), are clearly "bad" parameters.
 This motivates the need for the test-bed procedure outlined in the following section.
 
-## Test Bed
+# Test Bed
 The entire project was created around a *mix-and-match* design philosophy, that is try to allow for as much freedom in the choice of: cipher, simulation system, security parameters, etc.
 
 The project was centered around keeping the choice of cipher and security parameters completely disjoint from the system to be simulated.
