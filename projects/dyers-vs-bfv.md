@@ -40,7 +40,7 @@ This project was the first of my graduate studies, and developed foundational id
     u[k] = \Phi \xi[k] + \Psi \sigma[k] \coloneqqf f^{\text{SHE}}\left( \Phi, \xi[k], \Psi, \sigma[k]  \right)
 \\] -->
 
-## Encrypted Controller
+# Encrypted Controller
 An *encrypted controller* is a digital controller running inside the encrypted-space of a homomorphic cipher--a type of cipher that allows computation on encrypted data.
 Given the great computational burden imposed by encrypted calculation and the real-time requirements of digital controllers, encrypted controllers are extremely difficult to construct.
 
@@ -56,7 +56,7 @@ This allows us to keep every aspect of our control system secret from a cloud pr
 
 As of time of writing most of the encrypted controller designs proposed in the academic literature have used so called **Partially Homomorphic Encryption (PHE)**, which only allows either multiplication or addition but not both.
 
-### PHE Controller
+## PHE Controller
 PHE ciphers such as *RSA* (multiplicative), *ElGamal* (multiplicative), *Paillier* (additive) have been around for awhile and are fast enough under the single encrypted operation they offer.
 Because of this they have been the primary ciphers of study in encrypted controls research.
 
@@ -64,6 +64,8 @@ Since a PHE cipher can only perform a single operation the other operation must 
 Typically the multiplications are performed in the cloud and the additions are performed plant-side.
 This however leaves partial information exposed when the plant decrypt the received products from the cloud.
 The result is that information about the controller's operations are leaked plant-side when using PHE.
+
+This information leak from using PHE is depicted below:
 
 {% include figure 
     popup=true 
@@ -74,10 +76,13 @@ This research seeks to address the security holes offered by PHE based encrypted
 Note that SHE in general is also known to be computationally expensive and its application to real-time control is considered to be infeasible. 
 However, this and the other research projects which compose my MS thesis, will show that with proper parameter selection and accompanying support circuits, SHE based encrypted control is possible.
 
-### SHE Controller
+## SHE Controller
 The use of SHE in encrypted control systems has been considered impossible in past years due to their operation limit and slow computation time, however this research shows the feasibility of a SHE encrypted controller.
 
 Since SHE supports both addition and multiplication we do not need to worry about information leak as we did in the PHE based system.
+This is because **all** operations (i.e. both addition and multiplication) are being done in cipher space, so no intermediate computation is revealed.
+
+We can see the increased security configuration offered by SHE in the diagram below:
 
 {% include figure 
     popup=true 
@@ -86,6 +91,8 @@ Since SHE supports both addition and multiplication we do not need to worry abou
 
 While SHE solves our information leak problem it imposes its own technical challenges which must be overcome.
 Since the number of operations are limited we must take great care to make sure our control equation can be computed within the allowed *operation budget*, something addressed more in [another project](/projects/rewrite-rules.md).
+
+# Teleoperation
 
 
 ## Timing Results
