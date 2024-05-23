@@ -92,18 +92,40 @@ This research will explore automated *rewrite rules* that can be applied to redu
 Two major rewrites--the *associative rewrite* and the *distributive rewrite*--are explored in the following section.
 
 # Rewrites
-* You need to explain them both at a high level
-* Show the depth decreasing rewrites:
-  - single associative
-  - associative plus distributive
+
 ## Associative Rewrite
+The associative rewrite represents a regrouping of parameters as in $(a \cdot b) \cdot c = a \cdot (b \cdot c)$, 
+ and is only applicable to two adjacent `MUL` gates.
+For example, if $a$ has a greater depth than both $b$ and $c$, i.e.
+
+\\[\text{depth}(b), \text{depth}(c) < \text{depth}(a)\\]
+
+then, an associative rewrite will decrease the overall depth of the circuit.
+
+This is depicted below, note however that $a$ represents some subcircuit with depth $3$ and is not a circuit input as in the previous example.
 {% include gallery 
     id="associative_rewrite_simple"
-    caption="" %}
+    caption="A demonstration of the rewrite $(a \cdot b) \cdot c \to a \cdot (b \cdot c)$. Before the rewrite the node $a$ (blue dashed circle) has higher depth than the other nodes. It is identified that if $a$ swaps places with $c$ (red dot-dashed circle) then the overall depth of the circuit will decrease by one." %}
+Since $\text{depth}(a)$ is the greatest of all nodes considered, it is counterproductive to have node $a$ deep in the graph.
+By swapping node $a$ and $c$, we reduce the number of future `MUL` gates that $a$ will have to pass through by one.
+
+$\newcommand{\expressionBefore}{
+  \left( \left( \left( a \cdot b \right) \cdot c \right) \cdot \left( d \cdot e \right) \right)  \cdot \left( f \cdot g \right)}
+\newcommand{\expressionAfter}{
+  \left( \left( f \cdot g \right) \cdot \left( d \cdot e \right) \right)  \cdot \left( \left( a \cdot b \right) \cdot c \right)}$
+Consider the more complex example $\expressionBefore$.
+Looking at this expression we can observe that it is *left-heavy*, meaning the left side of the tree is significantly deeper than the right side.
+This is exactly the same as the first associative rewrite example we considered above.
 
 {% include gallery 
     id="associative_rewrite"
-    caption="" %}
+    caption="Associative rewrite taking $\expressionBefore$ and converting it into the more balanced $\expressionAfter$. The orange colored nodes represent elements of the *critical path* which is the path of maximum depth." %}
+
+Notice the associative rewrite swapped $\left( \left( a \cdot b \right) \cdot c \right)$ with the $\left( f \cdot g \right)$ term.
+This is because associative rewrite has the tendency of convert graph depth to graph breadth, thus steering the graph towards a more *balanced* configuration.
+
+The path shown in orange is the "critical path" that results in the maximum depth of the circuit.
+A well balanced tree will have almost all its nodes in the critical path.
 
 ## Distributive Rewrite
 
