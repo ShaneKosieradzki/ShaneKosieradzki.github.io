@@ -76,6 +76,11 @@ In practice it is often fine to map the arm and wand's initial position to the v
 
 An *encrypted teleoperation controller* was built to facilitate leader/follower behavior, where the controller will take action to ensure that the wand and arm maintain the same position in the virtual coordinate space.
 
+{% include figure 
+popup=true 
+image_path="/assets/vr-teleop/vr-demo.gif"
+caption="Video demonstration of the encrypted teleoperation control system. The robot arm tracks the VR wand in the user's hand, and the user has a virtual (simplified) view of the environment." %}
+
 # Control Procedure
 
 The control procedure is characterized by an initialization handshake between the remote and local machines.
