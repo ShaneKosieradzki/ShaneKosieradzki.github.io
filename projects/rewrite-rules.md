@@ -41,7 +41,7 @@ distributive_rewrite:
       title: "Distributive Rewrite After"
 ---
 
-<!-- {% include load-mathjax %} -->
+{% include load-mathjax %}
 {% include research-funding-disclosure-statement %}
 
 <p style="display:none">
@@ -166,7 +166,8 @@ A larger number of `MUL` gates negatively impacts the execution time of the resu
 
 <!-- UNSORTED EQUATION -->
 
-$ \begin{equation}
+$$ 
+\begin{equation}
     \label{eq:unsorted-rp-torque}
     \begin{split}
     	\tau_{1}[k]
@@ -179,18 +180,20 @@ $ \begin{equation}
     	&-m_{2}\alpha K_{v1}e_{1}[k-1]d_{2}^{2}[k] \\
     	&+m_{2}\beta K_{v1}\dot{e}_{1}[k-1]d_{2}^{2}[k] \\
     	&+2m_{2}d_{2}[k]\dot{\theta}_{1}[k]\dot{d}_{2}[k] \\
-    	&+m_{1}l_{1}g\cos{\theta_{1}[k]}  \\
-    	&+m_{2}g\cos{\theta_{1}[k]}d_{2}[k] 
+    	&+m_{1}l_{1}g\cos(\theta_{1}[k])  \\
+    	&+m_{2}g\cos(\theta_{1}[k])d_{2}[k] 
     \end{split}
-\end{equation} $
+\end{equation}
+$$
 
 <!-- SORTED EQUATION -->
-$ \begin{equation}
+$$
+\begin{equation}
     \label{eq:sorted-rp-torque}
     \begin{split}
        \tilde{\tau}_{1}[k] 
-             &=d_2[k] (\cos{\theta_1[k]} m_2 g) \\
-             &+ \cos{\theta_1[k]} (g l_1 m_1) \\
+             &=d_2[k] (\cos(\theta_1[k]) m_2 g) \\
+             &+ \cos(\theta_1[k]) (g l_1 m_1) \\
              &+ (2 d_2[k] m_2) (\dot{d}_2[k] \dot{\theta}_1[k]) \\
              &+ (K_{v1} \beta m_2) (\dot{e}_1[k-1] (d_2[k] d_2[k])) \\
              &- (K_{v1} \alpha m_2) ((d_2[k] d_2[k]) (r_1[k-1] - \theta_1[k-1])) \\
@@ -201,4 +204,5 @@ $ \begin{equation}
              &+ r_1[k] (K_{p1} + K_{v1} \alpha) (I_2 + I_1 + l_1 (l_1 m_1)) \\
              &- \theta_1[k] (K_{p1} + K_{v1} \alpha) (I_2 + I_1 + l_1 (l_1 m_1))
     \end{split}
-\end{equation}$
+\end{equation}
+$$
