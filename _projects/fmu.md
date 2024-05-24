@@ -2,6 +2,11 @@
 title: Encrypted FMUs
 classes: wide
 
+# Project portfolio page
+header:
+  teaser: /assets/fmu/fmu-duffing.svg
+
+# Funding Disclosure Statement
 research:
   institute: Georgia Institute of Technology
   PI: Dr. Jun Ueda
@@ -13,6 +18,7 @@ research:
     title: Distributed Simulation of Encrypted Dynamics via Functional Mockup Units
     url: https://doi.org/10.1109/SII55687.2023.10039150
 
+# Minimal-Mistakes::Gallery
 duffing_trajectories:
   - image_path: /assets/fmu/traj-duff-unenc.svg
     url: /assets/fmu/traj-duff-unenc.svg

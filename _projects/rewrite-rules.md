@@ -2,6 +2,11 @@
 title: Rewrite Rules
 classes: wide
 
+# Project portfolio page
+header:
+  teaser: "/assets/rewrites/distributive-after-circled.svg"
+
+# Funding Disclosure Statement
 research:
   institute: Georgia Institute of Technology
   PI: Dr. Jun Ueda
@@ -13,6 +18,7 @@ research:
     title: Rewrite Rules for Automated Depth Reduction of Encrypted Control Expressions with Somewhat Homomorphic Encryption
     url: https://doi.org/10.1109/AIM52237.2022.9863395
 
+# Minimal-Mistakes::Gallery
 associative_rewrite_simple:
     - image_path: /assets/rewrites/simple-associative-before-circled.svg
       url: /assets/rewrites/simple-associative-before-circled.svg

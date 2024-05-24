@@ -2,6 +2,12 @@
 title: Dyer's vs BFV
 classes: wide
 
+# Project portfolio page
+header:
+  teaser: "/assets/dyers-vs-bfg/encrypted-controller-cartoon-she-thin.svg"
+excerpt: "Lore ipsum"
+
+# Funding Disclosure Statement
 research:
   institute: Georgia Institute of Technology
   PI: Dr. Jun Ueda
@@ -13,6 +19,7 @@ research:
     title: Secure Teleoperation Control Using Somewhat Homomorphic Encryption
     url: https://doi.org/10.1016/j.ifacol.2022.11.247
 
+# Minimal-Mistakes::Gallery
 cipher_timing:
   - image_path: /assets/dyers-vs-bfg/operation-time-bfg.png
     url: /assets/dyers-vs-bfg/operation-time-bfg.png

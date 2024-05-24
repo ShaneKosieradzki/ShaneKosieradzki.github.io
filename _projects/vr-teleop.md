@@ -2,6 +2,11 @@
 title: VR Teleoperation
 classes: wide
 
+# Project portfolio page
+header:
+  teaser: /assets/vr-teleop/vr-demo.gif
+
+# Funding Disclosure Statement
 research:
   institute: Georgia Institute of Technology
   PI: Dr. Jun Ueda

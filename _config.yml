@@ -130,6 +130,11 @@ author:
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/shane-kosieradzki-11739613b/"
 
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
+
 # Site Footer
 footer:
   links:
