@@ -5,6 +5,7 @@ classes: wide
 # Project portfolio page
 header:
   teaser: /assets/fpga-keygen/system-overview.svg
+  # teaser: /assets/fpga-keygen/system-overview.svg
 
 # Funding Disclosure Statement
 research:

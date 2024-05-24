@@ -4,7 +4,7 @@ classes: wide
 
 # Project portfolio page
 header:
-  teaser: "/assets/dyers-vs-bfg/encrypted-controller-cartoon-she-thin.svg"
+  teaser: "/assets/dyers-vs-bfg/encrypted-controller-cartoon-proposal.svg"
 excerpt: "Lore ipsum"
 
 # Funding Disclosure Statement
