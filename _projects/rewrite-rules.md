@@ -4,7 +4,7 @@ classes: wide
 
 # Project portfolio page
 header:
-  teaser: "/assets/rewrites/simple-product.svg"
+  teaser: /assets/rewrites/associative-rewrite-before-to-after.svg
 
 # Funding Disclosure Statement
 research:
