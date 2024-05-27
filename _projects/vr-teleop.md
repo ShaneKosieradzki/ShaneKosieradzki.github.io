@@ -5,6 +5,7 @@ classes: wide
 # Project portfolio page
 header:
   teaser: /assets/vr-teleop/vr-demo.gif
+excerpt: "Lore ipsum"
 
 # Funding Disclosure Statement
 research:

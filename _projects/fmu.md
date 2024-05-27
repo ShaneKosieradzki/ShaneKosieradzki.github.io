@@ -5,6 +5,7 @@ classes: wide
 # Project portfolio page
 header:
   teaser: /assets/fmu/fmu-duffing.svg
+excerpt: "Lore ipsum"
 
 # Funding Disclosure Statement
 research:
