@@ -7,14 +7,14 @@ permalink: /
 # Welcome Home
 
 this is the home page.
-This is a link to a [test link](subpage-test.md)
+Please check on the projects page to see my work.
 
+<!-- 
 Another [link](post-test.md)
 
 [teleoperation](/learning/teleoperation.md)
 # Project Links
-[projects](/projects-archive.md) \
-[projects2](/project2.md)
+[projects](/projects-archive.md) \ -->
 
 <!-- [VR Teleop](/projects/vr-teleop.md)       \
 [FPGA KeyGen](/projects/fpga-keygen.md)   \
