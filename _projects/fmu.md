@@ -5,7 +5,7 @@ classes: wide
 # Project portfolio page
 header:
   teaser: /assets/fmu/fmu-duffing.svg
-excerpt: "Lore ipsum"
+excerpt: "Research and development of encrypted simulation technology based on the Function Mock-up Interface open standard."
 
 # Funding Disclosure Statement
 research:

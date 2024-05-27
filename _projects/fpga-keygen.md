@@ -5,7 +5,7 @@ classes: wide
 # Project portfolio page
 header:
   teaser: /assets/fpga-keygen/teaser.svg
-excerpt: "Lore ipsum"
+excerpt: "Design and implementation of dedicated FPGA hardware for rapid cryptographic key generation."
 
 # Funding Disclosure Statement
 research:

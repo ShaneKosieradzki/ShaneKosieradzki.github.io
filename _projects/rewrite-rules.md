@@ -5,7 +5,7 @@ classes: wide
 # Project portfolio page
 header:
   teaser: /assets/rewrites/teaser.svg
-excerpt: "Lore ipsum"
+excerpt: "Expression rewrite rules to transform an algebraic expression into a form more suitable for encrypted evaluation."
 
 # Funding Disclosure Statement
 research:

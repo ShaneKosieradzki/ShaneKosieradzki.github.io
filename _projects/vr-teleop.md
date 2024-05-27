@@ -5,7 +5,7 @@ classes: wide
 # Project portfolio page
 header:
   teaser: /assets/vr-teleop/vr-demo.gif
-excerpt: "Lore ipsum"
+excerpt: "Encrypted teleoperation between a remote robot manipulator and local user with VR equipment."
 
 # Funding Disclosure Statement
 research:

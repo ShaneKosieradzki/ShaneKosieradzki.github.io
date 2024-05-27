@@ -5,7 +5,7 @@ classes: wide
 # Project portfolio page
 header:
   teaser: /assets/dyers-vs-bfg/encrypted-controller-cartoon-proposal.svg
-excerpt: "Lore ipsum"
+excerpt: "World's first proposed encrypted control scheme based on Somewhat Homomorphic Ciphers. Allowing for complete concealment of controller operation."
 
 # Funding Disclosure Statement
 research:
