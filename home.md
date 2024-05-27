@@ -1,5 +1,5 @@
 ---
-layout: splash
+# layout: splash
 title: "home"
 permalink: /
 ---
@@ -8,6 +8,8 @@ permalink: /
 
 this is the home page.
 Please check on the projects page to see my work.
+
+<span style="color:red">TODO: Make a more interesting home page</span>.
 
 <!-- 
 Another [link](post-test.md)

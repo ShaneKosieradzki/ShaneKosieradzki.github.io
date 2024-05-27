@@ -101,6 +101,8 @@ Since the number of operations are limited we must take great care to make sure 
 
 # Teleoperation
 
+<span style="color:red">TODO: Link to dedicated teleoperation page (teleoperation is used in 3 different projects)</span>.
+
 
 ## Timing Results
 {% include gallery 

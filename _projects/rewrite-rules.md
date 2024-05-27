@@ -62,7 +62,7 @@ $\newcommand{\distributiveExpressionAfter}{\left( \left( a \cdot b \right) \cdot
 </p>
 
 
-# Research Goal
+<!-- # Research Goal
 * Construct Encrypted Controller
   - Since we are using SHE we have a limited *noise budget*
   - Need to take proactive steps to "sort" the expression to find optimal form $(x+y)^2$ vs $x^2 + 2xy + y^2$.
@@ -78,7 +78,7 @@ $\newcommand{\distributiveExpressionAfter}{\left( \left( a \cdot b \right) \cdot
 {% include figure 
     popup=true 
     image_path="/assets/rewrites/plaintext-cipherspace-homomorphism.svg"
-    caption="" %}
+    caption="" %} -->
 
 
 # What is an Arithmetic Circuit?
@@ -164,6 +164,8 @@ A larger number of `MUL` gates negatively impacts the execution time of the resu
 </video>
 
 # Experimental Outcome (RP Manipulator Dynamics)
+
+<span style="color:red">TODO: Format the before and after in conjunction with the rp-manipulator figure</span>.
 
 * Possibly might not include this to simply the page
 {% include figure 
