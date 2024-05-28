@@ -4,7 +4,12 @@ classes: wide
 permalink: /academics
 ---
 
-# Degrees Earned
+**Georgia Tech**, Atlanta, Georgia
+:   - M.S. Mechanical Engineering (Thesis)
+    - [Biorobotics and Human Modeling Lab](https://www.biorobotics.gatech.edu/wp/) member
+    - Major Area: Automation/Mechatronics 
+    - Minor Area: Computer Aided Engineering (CAE) & Design
+    - Research Area: Homomorphic Encryption/Cryptography
 
 **St. Olaf College**, Northfield, Minnesota
 :   - B.A. in Physics & Mathematics
@@ -13,16 +18,7 @@ permalink: /academics
       - **The Stoc Machine**, St. Olaf & Carleton College Engineering Team \
         My fellow classmates and I were members of an inaugural joint engineering team, working to create autonomous drones for competition
     - Physics TA
-
-**Georgia Tech**, Atlanta, Georgia
-:   - M.S. Mechanical Engineering (Thesis)
-    - [Biorobotics and Human Modeling Lab](https://www.biorobotics.gatech.edu/wp/) member
-    - Major Area: Automation/Mechatronics 
-    - Minor Area: Computer Aided Engineering (CAE) & Design
-    - Research Area: Homomorphic Encryption/Cryptography
         
-
-
 # Academic Presentations
 - Shane Kosieradzki, Jun Ueda, Encrypted Sensor and Actuator Interface for Encrypted Control Signals via Embedded FPGA Key Generation, *International Symposium on System Integration*, Vinpearl Convention Center, Ha Long, Vietnam, Jan. 2024
 - Shane Kosieradzki, Jun Ueda, Encrypted Teleoperated Robotic Control, *Savannah River National Laboratory University Student Poster Session*, Savannah River National Laboratory University, Aiken County, SC, Nov. 2022.

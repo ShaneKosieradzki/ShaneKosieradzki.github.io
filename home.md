@@ -1,32 +1,14 @@
 ---
 # layout: splash
-title: "home"
+title: "Home"
 classes: wide
 permalink: /
 ---
 
-# Welcome Home
+Hello and welcome to my page.
+My name is Shane Kosieradzki and this website captures my professional interests and academic achievements.
 
-this is the home page.
-Please check on the projects page to see my work.
 
-<span style="color:red">TODO: Make a more interesting home page</span>.
-
-# About Me
-As a child, I always knew I wanted to be an inventor. I was always tinkering with things around the house, and would often take apart electronics to see what was inside.  At the time I didn't realize what I called an "Inventor" is what adults called "Engineers," but the principle was the same. During elementary school, I was diagnosed with dyslexia and dysgraphia, which made school-work more challenging and time-consuming. From a young age, this left me with an unbending determination to overcome any academic challenge I undertake regardless of the effort required. To fulfill my dream of being what I originally conceived as an inventor, I plan to study mechanical system design, in particular, robotics and mechatronics at the doctoral level.
-
-I graduated from St. Olaf College in May 2018 with a double major in physics and mathematics, with an emphasis in analysis. I took particular interest in scientific visualizations, especially in regards to physical systems. Throughout my undergraduate career, I had the opportunity to participate in a variety of different research projects involving theoretical, experimental, and computational work. All of these research experiences helped to solidify my future career goals in a unique way. 
-
-My theoretical research was in the form of two semesters of independent study with Dr. Prabal Adhikari. We studied how quantum circuits (q-circuits) could be arranged to perform known quantum algorithms (q-algorithms). While these q-algorithms were well-known, with mature q-circuit representations, how to physically realize the quantum gates (q-gates) that composed these q-circuits was unexplored. We went on to consider the sorts of quantum systems that might be used to realize some of the aforementioned q-gates. I left this experience with a better understanding of the multidisciplinary nature of innovation and the importance of the union between design and theory.
-
-In terms of experimental work, I have completed a variety of advanced labs, such as measuring the Faraday Rotations of different mediums or performing electron microscopy on unique materials. Of all these projects, the one that influenced me the most is the summer research I did at Hamline University in 2016. We focused on creating a working proof-of-concept for ecologically sustainable innovation. We developed a bio-electric system that utilized microbial respiration to generate electrical energy. This experience was unique in the level of freedom we had in our methodology, with several designs being prototyped, tested, and modified before arriving at our final solution. During this process, I found great joy in tinkering with our device and seeing the incremental improvements before my eyes.
-
-My computational experience at St. Olaf primarily involves two different research programs. The first of these is the physics research I did with Dr. Amy Kolan during my senior year at St. Olaf. We studied a novel algorithm known as Divide and Concur. This algorithm utilized the observation that many computational problems can be reconsidered as the mutual satisfaction of multiple distinct constraints, which are themselves easily solved.  The procedure first divided the problem into the composite constraints, solved each constraint individually, and then combined as many solutions that concur/overlap with each other as possible. After studying its operation, we went on to investigate what kinds of physical systems the algorithm would be well-suited to solve, and found great success in the domain of packing problems. Seeing the computer chew through these difficult problems gave me a better appreciation for the utility computers can provide when considering tangible physical systems.
-
-In my free time, I have continued to explore programming with personal projects. Specifically, I am interested in Genetic Algorithms, a class of stochastic optimization procedures inspired by Charles Darwin's theory of natural evolution. Briefly, the procedure is this: a fitness function is defined of which we would like to optimize and a population of creatures is created whose DNA is a possible input to the fitness function. The creatures are then bred together to make a new generation of creatures whose DNA is a combination of their parents' DNA. Those not fit enough are removed from the generation. There are many different ways to combine the DNA, but implementing the variants in code is tedious and repetitive. My project, Galapagos, seeks to solve this issue by exposing a vast library of genetic procedures to the user, freeing them from the burden and allowing them to solely focus on finding the optimal solution for their particular fitness function.
-
-Since graduating from St. Olaf, I have been working for Starkey Hearing Technologies, where I currently hold the position of Firmware Engineer. In this role, I am tasked with developing C code to drive the microcontrollers used by the company to orchestrate their various electro-acoustic embedded systems. Most recently, I have worked on the firmware development of the company's latest hearing aid charger. This project has required me to work closely with electrical engineers to understand and interface with the various analog circuitry they designed. I consider the skills I have developed in this role to be highly valuable for any engineering discipline, especially as more devices become "smart." 
-
-My career goal is to get a Ph.D. in mechanical engineering and go on to teach in academia. I have several different teaching experiences, each of which I found to be uniquely rewarding. During my sophomore year at St. Olaf College, I volunteered to be an instructor for the nationally-recognized "Girls Who Code" (GWC) program at a local high school. During my time with GWC, I provided instruction and assistance to the students as they worked through an introductory Javascript curriculum provided by GWC. I was also a TA in an undergraduate physics lab for 4 semesters. When teaching, I am particularly good at empathizing with what it's like to first learn the material, which helps me warn the students of the traps that I fell into when I first studied the problem. I feel a great sense of fulfillment and pride when my students finally overcome a challenging subject or problem. 
-
-I am looking for a graduate program with academic rigor, leading edge faculty, state of the art computing facilities, and exposure to a variety of research opportunities. It is primarily for these reasons that I would like to pursue a doctoral degree at the <<school name>>. <<Why do I want to go to this school>> Additionally, <<Something else like: Geographic benefits>> . Ultimately, I want to earn my degree from a prestigious institution where I can be intellectually stimulated and challenged to learn and develop new mechanical systems and techniques to apply to unique engineering problems. The University of <<Institution name>> provides remarkable opportunities and I would be thrilled to pursue my post-graduate doctoral studies in your <<Name of the Scool/sub-college>>.
+{% include figure 
+    popup=true 
+    image_path="/assets/my-interests-venn-diagram.svg" %}
