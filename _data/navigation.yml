@@ -1,8 +1,4 @@
-main:
-  - title: "About Me"
-    url: "/about-me"
-    description: 
-  
+main: 
   - title: "Academics"
     url: "/academics"
     description: 
