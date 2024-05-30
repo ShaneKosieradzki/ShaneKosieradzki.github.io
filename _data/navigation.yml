@@ -7,6 +7,10 @@ main:
     url: "/projects"
     description: 
   
+  - title: "Work Experience"
+    url: "/work-experience"
+    description: 
+  
   - title: "Contact"
-    url: 
+    url: "/contact"
     description: 
