@@ -23,3 +23,19 @@ permalink: /work-experience/
 
 **Conversions Engineer**, *Open Systems International (OSI)*, Medina, MN
 :  - Translated customer's electric-utility databases to conform with OSI's internal standards
+   - Managed and maintained legacy conversion code for previous clients
+
+**Physics Teaching Assistant**, *St. Olaf College*, Northfield, MN
+:  - Assisted students during lab period to help them understand and perform lab work as well as grading their lab notebooks
+   - Tutored students to aid in their comprehension of course work and prepare for examinations
+
+
+# Volunteer Positions
+
+**Computer Programming Instructor**, *Girls Who Code*, Lakeville, MN
+:  - Led an introductory Javascript course to a group of middle and high school students
+   - Worked one-on-one with students who were struggling resulting in a 100% course completion from all participants
+
+**Physics Instructor**, *First Tech Challenge*, Lakeville, MN
+:  - Assisted highschool students with system dynamics, robot part selection and command generation for their competition robot.
+   - Mentored students on technical writing and scientific reports.
