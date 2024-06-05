@@ -24,7 +24,7 @@ permalink: /academics
         Received Honorable mention for submissions in my Junior and Senior year under the direction of Dr. Joseph Benson.
         These submissions consisted of mathematical models constructed by myself and another student, in response to the real world problem posed by the given year's MCM challenge.
      - **The Stoc Machine**, *St. Olaf & Carleton College Engineering Team* \
-        My fellow classmates and I were inaugural members of a joint engineering team, working to create autonomous drones for competition
+        My fellow classmates and I were inaugural members of a joint engineering team, working to create autonomous drones for competition.
 :  **Research Areas**:
      - Computational Physics
      - Quantum Computation

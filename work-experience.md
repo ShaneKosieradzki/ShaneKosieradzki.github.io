@@ -11,13 +11,13 @@ permalink: /work-experience/
    - Student research management was accomplished through weekly scrum meetings and initial Gantt planning at the beginning of the semester
 
 
-**Firmware Engineer**, *Starkey Hearing Technology*, Northfield, MN
+**Firmware Engineer**, *Starkey Hearing Technology*, Eden Prairie, MN
 :  - Created firmware to power a new line of innovative hearing aid chargers
    - Designed firmware to respond to data collected from various detection circuits to appropriately react when hearing aids were added or removed from the charger, a certain battery level was reached, a communication fault occured, and more
    - Collaborated with R&D, various engineering teams, and sales to ensure each part of the device worked in tandem
 
 
-**DevOps Engineer**, *Starkey Hearing Technology*, Northfield, MN
+**DevOps Engineer**, *Starkey Hearing Technology*, Eden Prairie, MN
 :  - Replaced the legacy firmware packaging system from the ground up, with a flexable plug-in based system, capable of supporting an arbitrary number of user configurations.
    - Constructed the packaging system to be able to prepare the environment, build the firmware, collect the compiled artifacts and log files into a package, zip and deliever the package to the specified location
 
