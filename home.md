@@ -21,8 +21,19 @@ My areas of expertise are depicted in the Venn Diagram below:
 # What is Cryptographic Robotics?
 The emerging field of *Cryptographic Robotics* can be understood as the combination of existing robotic technologies and methods with the sophistication of modern cryptography to produce novel methods that increase robotic systems security and reduce vulnerability.
 
-## Why we need it.
+## Why we need it
 The beginning of the 21st century has been marked by widespread integration of digital devices into our daily lives.
 These digital assets have provided incredible utility and have facilitated levels of communication on a global scale.
 While this is a remarkable accomplishment for humanity is also introduces a new vulnerability that did not exist before.
+
+So called *hacking* can be defined as unauthorized disruption, surveillance, or complete take-over of digital assets.
+As our world increasingly relies on digital interconnection the risk of hacking become increasingly relevant.
+Disruption to critical infrastructure such as power-grids & utilities or military defense armaments would be catastrophic to national security and the well being of individual citizens.
+
+As such developing secure robotic system must be a top priority.
+
+## What I Do
+- I have experience in hardware, firmware, and software development which gives me the know-how to utilize the most appropriate computational technology for the given cryptographic challenge.
+- Having obtained a graduate level abstract algebra education, I am well equipped to understand the mathematical intricacies of modern cryptographic ciphers and methods.
+- My formal physics and control theory education has given me the tools need to analyze physical systems, derive their equations of motion, and construct a control law to achieve desired system behavior
 
