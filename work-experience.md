@@ -4,7 +4,7 @@ classes: wide
 permalink: /work-experience/
 ---
 
-**Lab Manager**, *Georgia Institute of Technology*, Atlanta, GA
+**Research Manager**, *Georgia Institute of Technology*, Atlanta, GA
 :  - Responsible for mentoring from approximately 8 students per semester to complete novel research in the [Biorobotics and Human Modeling Lab](https://www.biorobotics.gatech.edu/wp/)
    - Each student contemplated a research question at the beginning of the semester and was responsible for two academic presentations and a final report outlining the finding of their research
    - I was responsible for helping the students formulate an appropriate research question in the area of *encrypted robotics* and monitor their progress, throughout the semester.
