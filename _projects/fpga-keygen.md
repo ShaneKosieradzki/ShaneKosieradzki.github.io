@@ -87,9 +87,6 @@ It "checks" the primality of a number \\(n\\) by attempting to prove it to be co
 So its less of a primality test and more of a composite test.
 Still, be successively checking the same prime repeatedly we can gain high confidence that it is in fact a true prime.
 
-Miller-Rabin works as follows: we are tasked with deciding if $n$ is prime using a set of random natural numbers $a \in \mathbb{N}$ called witnesses.
-Let $A$ be a collection of random natural numbers, than $a \in A$ is said to be a *witness* to $n$ being composite it:
-
 Fermat's Little Theorem can be manipulated to come to the following form:
 
 \\[ a^{p-1} \equiv 1 \mod p \\]
@@ -104,12 +101,14 @@ Thus we can say that $a$ is a *witness* to $n$ being composite if:
 
 However, even if $n$ passes the above test, there is a chance that it is a strong pseudoprime, for which the corresponding value of $a$ would be a strong liar. 
 To remedy this, the Miller-Rabin test is performed several times on a potential prime, reducing the chances that it is a strong pseudoprime with so many strong liars.
+This gives the following probability:
 
-
-\\[ \varepsilon < \left(\frac{1}{4} \right)^k . \\]
+<!-- 
+\\[ \varepsilon < \left(\frac{1}{4} \right)^k . \\] -->
 
 \\[ P(\text{$n$ is prime after $k$ checks}) \approx 1 - \left( \frac{1}{4} \right)^k. \\]
 
+Thus we can use this repeated running of Miller-Rabin to achieve arbitrarily high confidence that a number is prime.
 # Experimental Setup
 To emulate a sensor signal in a consistent and reliable way a $\sin$ wave was produced by a function generator and fed into an analog to digital converter (ADC).
 The ADC signal was than fed through the internal encrypt logic implemented on the FPGA.

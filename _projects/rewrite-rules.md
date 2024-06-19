@@ -163,7 +163,7 @@ A larger number of `MUL` gates negatively impacts the execution time of the resu
   <source src="/assets/rewrites/recorded-presentation.mp4">
 </video>
 
-# Experimental Outcome (RP Manipulator Dynamics)
+<!-- # Experimental Outcome (RP Manipulator Dynamics)
 
 <span style="color:red">TODO: Format the before and after in conjunction with the rp-manipulator figure</span>.
 
@@ -171,11 +171,11 @@ A larger number of `MUL` gates negatively impacts the execution time of the resu
 {% include figure 
     popup=true 
     image_path="/assets/rewrites/rp-manipulator.svg"
-    caption="" %}
+    caption="" %} -->
 
 <!-- UNSORTED EQUATION -->
 
-$$ 
+<!-- $$ 
 \begin{equation}
     \label{eq:unsorted-rp-torque}
     \begin{split}
@@ -193,10 +193,10 @@ $$
     	&+m_{2}g\cos(\theta_{1}[k])d_{2}[k] 
     \end{split}
 \end{equation}
-$$
+$$ -->
 
 <!-- SORTED EQUATION -->
-$$
+<!-- $$
 \begin{equation}
     \label{eq:sorted-rp-torque}
     \begin{split}
@@ -214,4 +214,4 @@ $$
              &- \theta_1[k] (K_{p1} + K_{v1} \alpha) (I_2 + I_1 + l_1 (l_1 m_1))
     \end{split}
 \end{equation}
-$$
+$$ -->
