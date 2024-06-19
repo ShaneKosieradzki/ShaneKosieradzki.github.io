@@ -6,8 +6,8 @@ permalink: /academics
 
 **M.S.M.E**, *Georgia Tech*, Atlanta, GA
 :  **Degree Specialization**
-     - *Major Area*: Automation/Mechatronics 
-     - *Minor Area*: Computer Aided Engineering (CAE) & Design
+     - *Major Area*: Automation/Mechatronics & Computer Aided Engineering (CAE)
+     - *Minor Area*: Abstract Algebra & Cryptography
 :  **Affiliations**:
      - [Biorobotics and Human Modeling Lab](https://www.biorobotics.gatech.edu/wp/), *Research Lab at Georgia Tech* \
        Conducted novel research under the direction of world renown roboticist Dr. Jun Ueda to incorporate homomorphic encryption ciphers with existing control theoretic results. At the time of my membership our lab was one of only a handful of labs world-wide considering these research questions.
@@ -16,7 +16,7 @@ permalink: /academics
      - Arithmetic Complexity Theory
      - Control Theory
      - Encrypted Control
-:  <span style="color:red">TODO: Thesis Link</span>
+:  **Thesis:** [Heterogeneous Computation And Expression Optimization For Real-Time Homomorphically Encrypted Robot Control](https://hdl.handle.net/1853/75341)
 
 **B.A. Physics & Mathematics**, *St. Olaf College*, Northfield, MN
 :  **Affiliations**
