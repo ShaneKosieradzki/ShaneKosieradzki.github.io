@@ -100,12 +100,30 @@ While SHE solves our information leak problem it imposes its own technical chall
 Since the number of operations are limited we must take great care to make sure our control equation can be computed within the allowed *operation budget*, something addressed more in [another project](/projects/rewrite-rules.md).
 
 # Teleoperation
+The viability of a real-time encrypted controller was tested with simulations of a PD teleoperation control system.
+Such a system has two physical systems, known as *plants*, virtually coupled together via a distributed control scheme taking shared information from each plant.
+A typical teleoperation configuration involves an operator controlling a remote manipulator.
 
-<span style="color:red">TODO: Link to dedicated teleoperation page (teleoperation is used in 3 different projects)</span>.
+This research then investigates the use of different homomorphic ciphers to encrypt the shared information sent by each plant to the cloud controller.
+This allows the cloud to securely compute control commands for both plants, without reveling any plant information to the cloud.
+Such a system is depicted in the figure below:
+
+{% include figure 
+    popup=true 
+    image_path="/assets/dyers-vs-bfg/teleoperation-operator-manipulator-2.svg"
+    caption="" %}
 
 
-## Timing Results
+The challenge in realizing such a system lies in overcoming the significant computation burden homomorphic encryption imposes so to reach realtime performance.
+Overcoming this difficulties is one of the objectives of this research.
+
+Numerical simulations were conducting between an integer based homomorphic cipher and a Ring Learning With Error (R-LWE) based cipher.
+The timing results of these simulations are shown in the following bar graphs:
+
 {% include gallery 
     id="cipher_timing"
     caption="" %}
 
+# Conclusion
+Overall this research proposed a novel *somewhat homomorphic cipher* based controller as a potential solution to realize real-time encrypted robotic control.
+The study went on to compare different classes of ciphers to determine which was best suited to achieve target performance.
