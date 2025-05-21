@@ -1,5 +1,5 @@
 ---
-title: Dyer's vs BFV
+title: Somewhat Homomorphic Robot Controller
 classes: wide
 
 # Project portfolio page
