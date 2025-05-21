@@ -4,6 +4,12 @@ classes: wide
 permalink: /work-experience/
 ---
 
+**Cryptographic Engineer**, *Crypto Asset Technology Lab inc.*, Remote
+:  - Responsible for a secure cloud-based Key Backup & Recovery (KBR) system for cryptocurrency keys. This is the world's first KBR service based on Threshold Fully Homomorphic Encryption (TFHE), which enables the vault to live fully in the cloud 
+   - Researched and developed the KBR system under SBIR Award 2404481: SBIR Phase I: Quantum Resistant Cloud-Based Vault Service for Cryptocurrency Key Backup and Recovery
+   - Developed and patented a system to construct cryptocurrency ECDSA transaction signatures without revealing the private key using TFHE.
+   - Developed cryptanalysis tools for products that aid law enforcement's forensic investigations of cryptocurrency-related evidence
+
 **Research Manager**, *Georgia Institute of Technology*, Atlanta, GA
 :  - Responsible for mentoring from approximately 8 students per semester to complete novel research in the [Biorobotics and Human Modeling Lab](https://www.biorobotics.gatech.edu/wp/)
    - Each student contemplated a research question at the beginning of the semester and was responsible for two academic presentations and a final report outlining the finding of their research
