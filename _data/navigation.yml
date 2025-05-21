@@ -11,6 +11,6 @@ main:
     url: "/work-experience"
     description: 
   
-  - title: "Contact"
-    url: "/contact"
+  - title: "Patents"
+    url: "/patents"
     description: 
